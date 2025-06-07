@@ -1,0 +1,79 @@
+##  Day 8 Task Report: VPN Setup and Privacy Evaluation
+## Objective
+To understand the role of Virtual Private Networks (VPNs) in protecting user privacy and enabling secure communication. This task involved hands-on VPN setup, connection testing, and evaluation of its encryption and privacy features.
+
+#Tools used
+--Operating System: Kali Linux
+
+--VPN Client: ProtonVPN CLI
+
+--IP Check Website: whatismyipaddress.com
+
+--Browser Used: Firefox
+
+##Steps Performed
+ 1. Account Creation
+An account was created on a reputable VPN provider to access their secure VPN services.
+
+2. VPN Client Installation
+ProtonVPN CLI was installed on Kali Linux using the following commands:
+sudo apt update
+sudo apt install -y protonvpn-cli
+
+ 3. Login to VPN
+Logged in to the VPN client via terminal:
+protonvpn-cli login [username]
+
+ 4. VPN Connection
+A secure VPN connection was established using Smart Connect:
+protonvpn-cli connect --sc
+
+This connected to the nearest available VPN server for optimal performance.
+
+ 5. IP Address Verification
+After connection, the IP address was verified using:
+firefox https://whatismyipaddress.com
+
+A new IP address was observed, confirming the VPN was successfully masking the real IP.
+Screenshot of IP address after VPN connection attached.
+
+ 6. Traffic Encryption Test
+A secure HTTPS website (https://www.wikipedia.org) was accessed. The connection was successful, indicating that all web traffic was being encrypted.
+
+7. Disconnection and Comparison
+The VPN was disconnected using:
+protonvpn-cli disconnect
+
+The IP was checked again to confirm it returned to the original. Basic browsing speed was also tested before and after the VPN connection.
+
+##  VPN Encryption & Privacy Features
+--Encryption Protocols: The VPN uses strong encryption such as AES-256 with protocols like OpenVPN and WireGuard.
+
+--Privacy: Ensures that the user's IP address and data traffic are hidden from ISPs and third parties.
+
+--DNS Leak Protection: Ensures no DNS queries are leaked outside the VPN tunnel.
+
+--Kill Switch: Automatically stops traffic if VPN disconnects unexpectedly (available in GUI versions).
+
+##  Benefits of Using a VPN
+--Hides real IP address, masking user location.
+
+--Encrypts internet traffic, even on public Wi-Fi.
+
+--Prevents tracking by ISPs and websites.
+
+--Bypasses geographic restrictions and censorship.
+
+## Limitations
+--May slightly reduce internet speed due to encryption overhead.
+
+--Some websites may block access when VPN is detected.
+
+--A VPN does not protect from malware or phishing — additional tools are needed for that.
+
+## Conclusion
+This task provided practical experience in configuring and testing a VPN on a Linux system. It demonstrated how VPNs protect user privacy, encrypt communication, and allow anonymous browsing. Understanding VPNs is essential for cybersecurity professionals, especially when operating in high-risk or surveillance-heavy environments.
+
+
+
+
